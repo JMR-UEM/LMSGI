@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>CPE1 -B- Utilización de eventos de ratón</title>
+    <meta name="author" content="Nombre alumno">
+    <link rel="stylesheet" href="css/UD4_CPE1B_estilos.css">
+    <script>
+        function escribir(num) {
+        var colores = ["No está sobre ningún cuadrado","rojo","amarillo","verde","azul"];
+        var texto = document.getElementById("respuesta")
+        texto.innerHTML = colores[num]
+        }
+    </script>
+</head>
+<body>
+    <h1>El puntero del ratón esta ahora encima del cuadrado de color:</h1>
+    <h2 id="respuesta">No está sobre ningún cuadrado</h2>
+    <div class="contenedor">
+        <div id="rojo" onmouseover="escribir(1)" onmouseout="escribir(0)">
+        </div>
+        <div id="amarillo" onmouseover="escribir(2)" onmouseout="escribir(0)">
+        </div>
+        <div id="verde" onmouseover="escribir(3)" onmouseout="escribir(0)">
+        </div>
+        <div id="azul" onmouseover="escribir(4)" onmouseout="escribir(0)">
+        </div>
+    </div>
+</body>
+</html>
+

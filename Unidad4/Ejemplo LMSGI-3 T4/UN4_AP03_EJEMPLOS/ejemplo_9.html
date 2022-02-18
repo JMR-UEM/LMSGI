@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejemplo 9 Abrir y cerrar subventanas</title>
+<script>
+function inicializar()
+{
+document.getElementById("crear-ventana").onclick=crearNueva;
+document.getElementById("cerrar-ventana").onclick=cerrarNueva;
+}
+var miVentana;
+function crearNueva()  {
+    miVentana= window.open("https://www.w3c.es/","","height=600,width=800");}
+function cerrarNueva()  {
+    if(miVentana) {
+    miVentana.close(); miVentana = null;}
+}
+</script>
+</head>
+<body onLoad="inicializar()">
+<h1>Ejemplo 9 Abrir y cerrar subventanas</h1>
+<form>
+<p><input type="button" id="crear-ventana" value="Crear Nueva Ventana">
+<input type="button" id="cerrar-ventana" value="Cerrar Nueva Ventana"></p>
+</form>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>UD4 CPE2 Validación formulario de contacto</title>
+  <meta name="author" content="Nombre alumno">
+  <link rel="stylesheet" href="css/UD2_CPE4_estilos.css">
+  <link rel="stylesheet" href="css/UD2_CPE4_contacto.css">
+</head>
+<body>
+	 <!-- Definimos la pagina --> 
+	<div id="page">
+		<!-- Definimos nueva cabecera de la pagina -->
+		<div id="headerimg">
+			<h1>Página web personal</h1>
+			<h2>Tema: medio ambiente</h2>         
+		</div>             
+		<main>
+			<!-- Definimos el formulario de contacto -->
+			<div id="contenedorFormulario">
+				<!-- Texto específico cabecera del formulario -->
+				<h1>Contáctanos</h1>
+				<!-- Campos del formulario -->
+				<form>
+					<input id="nombre" name="nombre" type="text" required placeholder="Escribir el nombre"><label></label>
+					<input id="correo" name="correo" type="email" required placeholder="Escribir el email"><label></label>
+					<textarea required placeholder="Escribir el mensaje..."></textarea>
+					<input type="submit" value="Enviar" />
+				</form>
+			</div>
+		</main>		
+	</div>
+	<!--Llamada al script de JavaScript que valida los campos del formulario -->
+	<script src="scripts/UD4_CPE2_contactar.js"></script>	
+</body>
+</html>

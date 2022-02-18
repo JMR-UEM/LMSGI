@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+<title>Ejemplo 5 Uso de onload</title>
+<meta charset="utf-8">
+<script>
+function pass() {
+var valor = prompt("Introduce la contraseña", "");
+if(valor == "ABC123") {
+alert("Contraseña correcta");
+} else {
+alert("Contraseña no correcta: [" + valor +"]");}
+}
+</script>
+</head>
+<body onload="pass();">
+<h2>Ejemplo 5 Uso de onload</h2>
+</body>
+</html>

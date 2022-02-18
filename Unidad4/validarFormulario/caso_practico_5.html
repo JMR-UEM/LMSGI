@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Caso practico 5 Validar formulario con JavaScript</title>
+<link rel="stylesheet" href="caso_practico_5.css">
+<meta charset="utf-8">
+<script>
+function validarEntero(valor){
+      //se intenta convertir a entero, si es entero no le afecta, si no lo es lo intenta convertir
+     valor = parseInt(valor)
+      //se comprueba si es un valor numérico
+      if (isNaN(valor)) {
+            //no es numero y se devuelve cadena vacia
+            return "";
+      }else{
+            //si es un número devuelve el valor
+            return valor;  }
+}
+function validaEnvia(){
+    //valida nombre
+    if (document.fvalida.nombre.value.length==0){
+        alert("Debe escribir su nombre")
+        document.fvalida.nombre.focus()
+        return 0; }
+    //valida edad que debe ser > 18
+    edad = document.fvalida.edad.value
+    edad = validarEntero(edad)
+    document.fvalida.edad.value=edad
+    if (edad==""){
+        alert("Debe introducir su edad.")
+        document.fvalida.edad.focus()
+        return 0;
+    }else{
+        if (edad<18){
+            alert("Debe ser mayor de 18 años.")
+            document.fvalida.edad.focus()
+            return 0; }
+    }
+    //valida el motivo
+    if (document.fvalida.contacto.selectedIndex==0){
+        alert("Debe seleccionar un motivo de su contacto.")
+        document.fvalida.interes.focus()
+        return 0; }
+    //el formulario se envia
+    alert("Muchas gracias por enviar el formulario");
+    document.fvalida.submit();}
+</script>
+</head>
+<body>
+<h1>Caso practico 5 Validar formulario</h1>
+<form name="fvalida"><table><tr>
+    <td>Nombre: </td>
+    <td><input type="text" name="nombre" size="30" maxlength="100"></td></tr><tr>
+    <td>Edad: </td>
+    <td><input type="text" name="edad" size="3" maxlength="2"></td></tr><tr>
+    <td>Contacto por:</td>
+    <td>
+    <select name="contacto">
+    <option value="elegir">Elegir
+    <option value="reclamacion">Reclamación
+    <option value="sugerencias">Sugerencias
+    <option value="trabajo">Solicitud de trabajo
+    </select>
+    </td></tr><tr>
+    <td colspan="2"><input type="button" value="Enviar" onclick="validaEnvia()"></td></tr></table>
+</form>  
+</body>
+</html>

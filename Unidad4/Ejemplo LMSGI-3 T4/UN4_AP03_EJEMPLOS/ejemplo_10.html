@@ -1,0 +1,19 @@
+<!DOCTYPE  html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo 10 Cambio foco ventana</title>
+    <script>
+    function focos() {
+    var miVentana = window.open( "ejemplo10_pagina_foco.html", "ventana","height=200, width=700, left=100, top=300" );
+    alert("Pulsa para devolver el foco a la ventana padre");
+    miVentana.blur();
+    alert("Pulsa para devolver el foco a la ventana hija");
+    miVentana.focus();
+    }
+    </script>
+</head>
+<body onload="focos();"> 
+    <h1>Ejemplo 10 Cambio foco ventana</h1>
+</body>    
+</html>

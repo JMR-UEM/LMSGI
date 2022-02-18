@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejemplo 17 Insertar un nodo hijo delante de...</title>
+</head>
+<body>
+<ul>
+       <li>Programación</li>
+       <li>Bases de datos</li>
+       <li>Sistemas Informáticos</li>
+</ul>
+<script>
+       var nuevoElemento = document.createElement("li");
+       var nuevoElementoTexto = document.createTextNode("Lenguaje de marcas"); 
+       nuevoElemento.appendChild(nuevoElementoTexto); 
+       var segundoElemento = document.getElementsByTagName("li")[1];    // accedemos a "segundoElemento"        
+       var elementoPadre = document.getElementsByTagName("ul")[0];  // accedemos a "elementoPadre"
+       elementoPadre.insertBefore(nuevoElemento, segundoElemento);  // Añadimos "nuevoElemento" delante de "segundoElemento"
+</script>
+</body>
+</html>

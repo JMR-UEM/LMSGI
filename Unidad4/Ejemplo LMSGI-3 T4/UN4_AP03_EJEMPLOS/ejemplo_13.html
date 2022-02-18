@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo 13 Uso de location()</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<script>
+function preguntar()	{
+	if (window.confirm('¿Quieres acceder a la web de El País?'))
+		  { window.location='https://elpais.com/';}
+	else
+	{ window.alert('No verás las noticias');}
+}
+</script>
+<button onClick="preguntar()">Ir a la página web de El País</button>
+</body>
+</html>

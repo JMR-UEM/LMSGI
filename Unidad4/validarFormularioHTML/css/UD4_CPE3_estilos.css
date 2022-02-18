@@ -1,0 +1,30 @@
+* { margin: 0px; padding: 0px;} 
+
+body {  text-align: justify;
+        background-color: rgb(210, 221, 231);}
+
+#page { width: 600px; 
+        margin: 100px auto;        
+        font: bold 18px verdana, sans-serif; }
+label{
+        width:600px;
+        float:left;
+        margin-bottom:10px;	
+        margin-left:20px; }
+
+input,select {
+        width:450px;
+        float:justify;
+        margin-bottom:15px;
+        margin-left:70px; }
+    
+fieldset{
+        background:#beeeee;
+        width:500px;
+        border: thick solid rgb(105, 95, 114); }
+    
+legend{
+        border: thick solid rgb(105, 95, 114);
+        background-color: #FFF;	
+        text-align: justify;
+        margin-left:113px; }

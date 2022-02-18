@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Caso practico 4 Utilizacion de addEventListener()</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="caso_practico_4.css">
+<script>
+    function mostraralerta(){
+      alert("Has podido hacer click!");}
+    function hacerclic(){
+     var elemento=document.getElementsByTagName('p')[0];
+     elemento.addEventListener('click', mostraralerta, false);
+     window.addEventListener('load', hacerclic, false);}
+     window.onload = hacerclic; 
+</script>
+</head>
+<body>
+    <div id="principal">
+        <h2>Caso práctico 4</h2>
+        <h3>Utilizacion de addEventListener()</h3>
+        <p><b>Aquí SI se puede hacer click</b></p>
+        <p><b>Aquí NO puede hacer click</b></p>
+    </div>
+</body>
+</html>        

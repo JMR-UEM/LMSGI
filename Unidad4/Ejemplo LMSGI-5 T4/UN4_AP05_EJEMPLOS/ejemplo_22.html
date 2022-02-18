@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo 22 Formulario básico con la obtención del array forms.</title>
+<meta charset="utf-8">
+<style> label{display:block;margin:5px;}</style>
+<script>
+window.onload = function () {             
+    var ejemplo = document.getElementById('ejemplo');
+    ejemplo.addEventListener("click", numForms); }
+function numForms () {
+    var formularios = document.forms; alert('El número de formularios en la página web es: '+formularios.length);}
+</script>
+</head>
+<body>
+    <div id="cabecera">
+        <h2>Formulario básico con la obtención del tamaño del array forms.</h2>
+    </div>
+    <div style="color:blue; margin:20px;" id ="ejemplo">Pulsar para ver el número de formularios</div>
+    <form name ="formularioPropietario" method="get" action="accion1.html">
+        <h2>Datos del propietario</h2>
+        <label>Nombre:<input id="nombrePropietario" type="text" name="nombreP" /></label>
+        <label>Apellidos:<input id="apellidosPropietario" type="text" name="apellidosP" /></label>
+        <label><input id ="boton1" type="submit" value="Enviar" name="botonP"></label>
+    </form>
+    <form name ="formularioReclamacion" method="get" action="accion2.html">
+        <h2>Datos del inquilino</h2>
+        <label>Nombre:<input id="nombreInquilino" type="text" name="nombreI" /></label>
+        <label>Apellidos:<input id="apellidosInquilino" type="text" name="apellidosI" /></label>
+        <label><input id="boton2" type="submit" value="Enviar" name="botonI"></label>
+    </form>
+</body>
+</html>

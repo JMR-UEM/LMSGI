@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CPE1 -A- Utilización de Date</title>
+  <meta name="author" content="Nombre alumno">
+  <link rel="stylesheet" href="css/UD4_CPE1A_estilos.css">
+  <script>
+    var reloj = 0;
+    var frecuencia = 800;
+    function actualiza() {
+      var ahora = new Date();
+      var fecha = ahora.getDate() + " - " + (ahora.getMonth() + 1) + " - " + ahora.getFullYear();
+      var hora = ahora.getHours() + ":" + ahora.getMinutes() + ":" + ahora.getSeconds();
+      var escribe = 'La fecha actual es ' + fecha + ' y exactamente son las ' + hora + ' horas';
+      var situa = document.getElementById('page');
+      situa.innerHTML = escribe;
+      reloj = setTimeout("actualiza()", frecuencia);
+    }
+  </script>
+</head>
+<body onload="actualiza()";>
+    <h2>UD4 CPE1 Ejercicio A</h2> 
+  <div id="page">
+  </div>
+</body>
+</html>

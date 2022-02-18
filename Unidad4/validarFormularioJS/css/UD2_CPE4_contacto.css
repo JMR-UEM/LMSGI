@@ -1,0 +1,72 @@
+/* Estilos para el formulario de contacto */
+#page { width: 1000px; 
+		margin: 0px auto; 
+	  	text-align: left; }
+/* Hemos incluido la imagen de fondo en la página */
+#headerimg {
+	background-image: url("../imagenes/fondo1.png");
+	padding: 20px; 
+    text-align: center;
+	color:azure; }
+/* Estilos para el título de la página */
+#headerimg h1 {
+	position: relative;
+	padding:20px 100px; }
+
+/* Estilos para el formulario propiamente */
+#contenedorFormulario 
+{	position:relative;
+	display: inline-block;
+	margin:50px;
+	width:750px;
+	padding:20px 50px;
+	background: rgba(93, 110, 83, 0.7);
+	text-align:left; }
+
+/* Estilos para el texto cabecera del formulario */
+#contenedorFormulario h1
+{	position: absolute;
+	top:-16px;
+	left:490px;
+	background: rgba(255, 255, 255, 0.7);
+	font: bold 22px verdana, sans-serif;
+	letter-spacing:4px;
+	color:rgb(44, 44, 44);
+	padding:0px 10px; }
+
+/* Estilo para el campo input textarea que no es de tipo 'submit' */
+input:not([type=submit]), textarea
+{	display: inline-block;
+	border:3px solid #e5e5e5;
+	color:black;
+	font-weight: bold;
+	padding:1px 4px 1px 45px;
+	margin-bottom: 10px; }
+
+/* Estilos para el campo input que no es de tipo 'submit',cambian los tamaños para dar impresión de crecimiento según tenga el foco o no*/
+input:not([type=submit]) 
+{
+	height:32px;
+	width:330px; }
+
+input:not([type=submit]):focus 
+{
+	width:390px; }
+
+/* Estilo para el campo textarea */
+textarea 
+{
+	font-family: arial;
+	font-size: 1em;
+	width:90%;
+	height:150px; }
+
+/* Estilo para el campo input submit */
+input[type="submit"] 
+{
+	margin: 10px 0px;
+    padding: 10px;
+    border: 3px solid #434343;
+	font-size: 1em;
+    color: rgb(44, 44, 44);
+    cursor: pointer; }

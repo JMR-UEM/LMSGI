@@ -1,0 +1,17 @@
+html {
+    text-align: center;
+    padding-top: 1em;
+    background: #46690e;
+  }
+  
+  button {
+    padding: 1em 1.2em;
+    background: #eb6ba0;
+    color: white;
+    font-size: 20px;
+    border-radius: .3em;
+    border: none;
+    border-bottom: 4px solid #aa4b72;
+    cursor: pointer;
+  }
+  

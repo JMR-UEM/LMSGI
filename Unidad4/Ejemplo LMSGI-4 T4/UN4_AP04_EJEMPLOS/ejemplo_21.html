@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo Ejecución de JavaScript desde enlaces</title> 
+    <script type="text/javascript">
+        function cambia(col) {
+        document.getElementById('cambiar').style.color = col 
+         }
+    </script>
+</head>
+<body>
+  <h1>Ejemplo Ejecución de JavaScript desde enlaces</h1>
+   <a href="javascript:cambia('red')">Cambiar a rojo</a><br/>
+   <a href="javascript:cambia('blue')">Cambiar a azul</a><br/>
+  <h2 id="cambiar">Esta línea debe cambiar de color.</h2>
+</body>
+</html>

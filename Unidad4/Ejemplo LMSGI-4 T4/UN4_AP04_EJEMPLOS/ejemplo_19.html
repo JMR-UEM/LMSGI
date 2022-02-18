@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejemplo 19 Asociar el ‘manejador de evento’ mediante una propiedad de evento.</title>
+</head>
+<body>
+<form name="formulario">           
+   <input id="Boton" name="boton" type="button" value="boton">           
+   <input name="caja_texto" type="text">            
+</form> 
+<script>  
+    document.getElementById("Boton").onclick = function Color(){ 
+    document.formulario.caja_texto.style.backgroundColor='#f88067';} 
+</script>
+</body>
+</html>

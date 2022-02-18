@@ -1,0 +1,27 @@
+* { margin: 0px; padding: 0px;} 
+
+body {  background-color: rgb(210, 221, 231);
+        text-align: center;} 
+
+h1 { font: bold 2em garamond; color: rgb(47, 47, 48); }
+
+p { font: bold 1.1em arial; }
+
+/* Para centrar los cuadrados */
+.contenedor {
+    display: flex;
+    justify-content: center; }
+
+#respuesta { font: bold 1.5em verdana; color: rgb(128, 26, 0); }
+
+/* Para los cuatro cuadrados */
+#rojo, #amarillo, #verde, #azul { width: 250px; height: 250px; 
+       border: 1px solid black; margin: 50px; float: left; }
+
+#rojo  { background-color: rgb(190, 5, 5); }
+
+#amarillo  { background-color: rgb(202, 202, 6); }
+
+#verde  { background-color: rgb(3, 104, 3); }
+
+#azul  { background-color: rgb(36, 211, 241); }

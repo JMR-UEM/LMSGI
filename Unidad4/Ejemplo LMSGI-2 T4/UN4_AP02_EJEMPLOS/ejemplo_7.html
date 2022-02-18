@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ejemplo 7 - Funcion que maneja cadenas</title>
+</head>
+<body>
+<h1>Ejemplo 7 Función que comprueba si en las cadenas dadas hay mayúsculas y/o minúsculas</h1>
+<script>
+function MayMin(cadena) {
+    var resultado = "La cadena \""+cadena+"\"";
+    // Comprobar mayúsculas y minúsculas
+    if(cadena == cadena.toUpperCase()) {
+    resultado += " está formada sólo por MAYÚSCULAS";}
+    else if(cadena == cadena.toLowerCase()) {
+    resultado += " está formada sólo por minúsculas";}
+    else {
+    resultado += " está formada por MAYÚSCULAS y minúsculas";}
+    return resultado;
+}
+alert(MayMin("La vida es muy sencilla, pero nos empeñamos en hacerla difícil. Confucio"));
+alert(MayMin("La creatividad es la inteligencia divirtiéndose. Albert Einstein"));
+</script>
+</body>
+</html>

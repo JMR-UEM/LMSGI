@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Ejemplo 24 Formularios con JavaScript</title>
+<script>
+function validar()
+{var ok = true;
+if(document.getElementById("nombre").value == "" || document.getElementById("apellidos").value == "" )
+{
+alert("Introduzca Nombre y Apellidos");
+ok = false; }
+return ok; 
+}
+</script>
+</head>
+<body>
+<form id="formulario" name="formulario" method="post" action="formulario.php" onsubmit="return validar();">
+Nombre:<input type="text" id="nombre" name="nombre"/>
+Apellidos:<input type="text" id="apellidos" name="apellidos"/>
+<input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar"/>
+</form>
+</body>
+</html>

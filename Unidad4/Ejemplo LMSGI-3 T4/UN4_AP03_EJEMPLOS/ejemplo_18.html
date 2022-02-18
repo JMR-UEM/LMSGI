@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejemplo 18 Eliminar el nodo hijo Programación</title>
+</head>
+<body>
+<ul>
+       <li>Programación</li>
+       <li>Bases de datos</li>
+       <li>Sistemas Informáticos</li>
+</ul>
+<script>
+       var nodoPadre = document.getElementsByTagName("ul")[0];
+       var primerHijo = document.getElementsByTagName("li")[0];
+       nodoPadre.removeChild(primerHijo);           
+</script>
+</body>
+</html>
