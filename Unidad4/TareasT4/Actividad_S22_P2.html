@@ -1,0 +1,29 @@
+<!-- 
+Escribir un programa en HTML que ejecute un script JavaScript (interno) que solicite un número del 1 al 10 y su “contador” sea menor o igual que 5. 
+En cada iteración, mostrar con un mensaje el número introducido y el valor del contador. Avisar con un mensaje cuando se ha llegado a 5 y cuál es el último número introducido. 
+El "contador" se iniciará en 1 y se irá incrementando cada vez que el usuario introduzca un número.
+Para mostrar el resultado por pantalla habría que utilizar el método document.write() como tenéis en el Ejemplo 8.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset=utf-8 " />
+<title>Actividad Semana 22 - Parte 2 - Javier MR - LMSGI - DAM1</title>
+</head>
+
+<body>
+    <h2>Mostrar números introducidos hasta un contador de 5.</h2><br>
+    <script>
+        for (var n = 1; n <= 5; ++n){
+            var num = prompt("Introduzca un número entero ");
+            parseInt(num);
+            alert("El número introducido es " + parseInt(num) + ", el contador actual está en " + n +  ". ");
+            document.write("El número " + n + " introducido es " + parseInt(num) + ". ");
+            }
+            alert("Se ha alcanzado el límite establecido para el contador ( " + (n-1) + "), el último número introducido es " + parseInt(num) +  ". ");
+    </script>
+    </body>
+
+</html>
