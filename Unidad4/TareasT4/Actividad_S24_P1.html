@@ -1,0 +1,63 @@
+<!-- 
+Escribir un programa en HTML que ejecute un script JavaScript (interno) que pida 3 notas de un alumno y calcule la media.
+Si la media es menor que 5 mostrará “Suspenso”; si está entre 5 y 6, “Aprobado”; si está entre 6 y 7, “Bien”; 
+si está entre 7 y 9, “Notable”, y si es mayor que 9, “Sobresaliente”.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset=utf-8 " />
+<title>Actividad Semana 24 - Parte 1 - Javier MR - LMSGI - DAM1</title>
+</head>
+
+<body>
+    <h2>Calcular media de 3 notas y mostrar valoración.</h2><br>
+    <script>
+        //Definimos longitud del array como constante, en este caso 3 que son las notas a introducir y sacar media
+        const longArr = 3;
+        var sumNotas = 0;
+        for (var n = 1; n <= longArr; ++n){
+            var nota = prompt("Introduzca la nota " + n + ": ");
+            parseInt(nota);
+            parseInt(sumNotas);
+            if (isNaN(nota) || (nota > 10)) {
+                alert("No se ha introducido un valor numérico entero o dentro del rango 0-10, nota no válida! ");
+            }
+            else {
+                sumNotas += +nota;
+                alert("La nota " + n + " introducida es " + nota + ". ");
+            }
+        }
+        
+        var notaMedia = sumNotas/longArr;
+        if (isNaN(nota) || (nota > 10)) {
+            document.write("Alguna de las notas no ha sido correctamente introducida, inténtalo de nuevo. ");
+        }
+        else {
+            alert("La nota media del alumno es " + notaMedia + ". ");
+            var resultado;
+            switch(true){
+                case (notaMedia<5):
+                resultado = "SUSPENSO ";
+                break;
+                case(notaMedia>=5 && notaMedia<6):
+                resultado = "APROBADO ";
+                break;
+                case(notaMedia>=6 && notaMedia<=7):
+                resultado = "BIEN ";
+                break;
+                case(notaMedia>=7 && notaMedia<9):
+                resultado = "NOTABLE ";
+                break;
+                case(notaMedia>=9):
+                resultado = "SOBRESALIENTE ";
+                break;
+            }
+            document.write("La calificación obtenida es " + resultado + ". ");
+        }
+    </script>
+    </body>
+
+</html>
