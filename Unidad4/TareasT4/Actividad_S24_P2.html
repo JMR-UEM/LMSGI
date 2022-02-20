@@ -1,0 +1,28 @@
+<!-- 
+Escribir un programa HTML que mediante dos botones vaya cambiando el color de un texto cualquiera en función del botón pulsado.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset=utf-8 " />
+    <title>Actividad Semana 24 - Parte 2 - Javier MR - LMSGI - DAM1</title>
+</head>
+
+<body>
+
+    <p id="p1">
+        Este es el texto que cambiará de color.
+    </p>
+
+    <button id ="btnRojo" type="button " onclick="Color('red') ">Color Rojo</button>
+    <button id ="btnAzul" type="button " onclick="Color('blue') ">Color Azul</button>
+
+    <script>
+        function Color(colorbtn) {
+            document.getElementById('p1').style.color=colorbtn;}
+    </script>
+</body>
+
+</html>
