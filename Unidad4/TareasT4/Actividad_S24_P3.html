@@ -1,0 +1,105 @@
+<!-- 
+Crear un programa HTML que funcione como una calculadora básica: suma, resta, multiplica y divide dos números. 
+El programa ejecutará un script en JavaScript encargado de realizar las operaciones. Cada una de ellas será una función independiente. 
+
+Desde HTML se creará un pequeño formulario para solicitar los datos de entrada por teclado y pasarlos a las funciones del script. 
+También mostrará el resultado de las operaciones realizadas sobre los datos de entrada.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset=utf-8 " />
+    <title>Actividad Semana 24 - Parte 3 - Javier MR - LMSGI - DAM1</title>
+
+    <script>
+      function selectorOperacion(valor) {
+        var nume1 = document.calculadora.num1.value;
+        var nume2 = document.calculadora.num2.value;
+        switch (valor) {
+          case 1:
+            alert(opSuma(nume1, nume2));
+            break;
+          case 2:
+            opResta(nume1, nume2);
+            break;
+          case 3:
+            opProducto(nume1, nume2);
+            break;
+          case 4:
+            opDivision(nume1, nume2);
+            break;
+        }
+      }
+
+      function validarOperacion() {
+        //validar que haya 2 números antes de operar
+        if (
+          document.calculadora.num1.value == "" ||
+          document.calculadora.num2.value == ""
+        ) {
+          alert(
+            "Debe introducir un valor en ambos números para poder realizar la operación."
+          );
+          return 0;
+        }
+        //validar que haya una operación escogida
+        if (document.calculadora.operacion.selectedIndex == 0) {
+          alert("Debe seleccionar un tipo de operación.");
+          document.calculadora.operacion.focus();
+          return 0;
+        }
+        //guardar tipo operacion
+        var tipoOp = +document.calculadora.operacion.selectedIndex;
+
+        selectorOperacion(tipoOp);
+
+        //TIPOS DE OPERACIONES
+        function opSuma(n1,n2) {
+          return n1 + n2;
+        }
+        function opResta(n1,n2) {
+            alert(parseInt(n1) - parseInt(n2));
+        }
+        function opProducto(n1,n2) {
+            alert(parseInt(n1) * parseInt(n2));
+        }
+        function opDivision(n1,n2) {
+            alert(parseInt(n1) / parseInt(n2));
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <h1>Calculadora HTML</h1>
+      <form name="calculadora">
+        <input
+          id="num1"
+          name="num1"
+          type="number"
+          required
+          placeholder="Introduzca el primer número"
+        />
+        <select name="operacion">
+          <option value="default">Elegir tipo de operación</option>
+          <option value="suma">SUMAR (+)</option>
+          <option value="resta">RESTAR (-)</option>
+          <option value="multi">MULTIPLICAR (x)</option>
+          <option value="division">DIVIDIR (%)</option>
+        </select>
+
+        <input
+          id="num2"
+          name="num2"
+          type="number"
+          required
+          placeholder="Introduzca el segundo número"
+        />
+
+        <input type="button" value="Calcular" onclick="validarOperacion()" />
+      </form>
+    </div>
+  </body>
+</html>

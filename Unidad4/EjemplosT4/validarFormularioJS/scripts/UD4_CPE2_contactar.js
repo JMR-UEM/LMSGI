@@ -25,7 +25,7 @@ function validaNombre()
 	
 	if(!encontrado)
 	{
-		nombre.setCustomValidity('El usuario no existe');
+		nombre.setCustomValidity('El usuario NO existe');
 	}
 	else
 	{
