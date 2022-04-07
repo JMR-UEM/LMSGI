@@ -22,8 +22,9 @@ si está entre 7 y 9, “Notable”, y si es mayor que 9, “Sobresaliente”.
             var nota = prompt("Introduzca la nota " + n + ": ");
             parseInt(nota);
             parseInt(sumNotas);
-            if (isNaN(nota) || (nota > 10)) {
+            if (isNaN(nota) || (nota < 0) || (nota > 10) || (nota == "")) {
                 alert("No se ha introducido un valor numérico entero o dentro del rango 0-10, nota no válida! ");
+                break;
             }
             else {
                 sumNotas += +nota;
@@ -32,7 +33,7 @@ si está entre 7 y 9, “Notable”, y si es mayor que 9, “Sobresaliente”.
         }
         
         var notaMedia = sumNotas/longArr;
-        if (isNaN(nota) || (nota > 10)) {
+        if (isNaN(nota) || (nota < 0) || (nota > 10) || (nota == "")) {
             document.write("Alguna de las notas no ha sido correctamente introducida, inténtalo de nuevo. ");
         }
         else {
